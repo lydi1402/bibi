@@ -8,28 +8,39 @@
     body {
       margin: 0;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background: linear-gradient(135deg, #ff6b81, #a55eea);
       font-family: Arial, sans-serif;
       color: white;
       text-align: center;
+      padding: 16px;
     }
     .card {
       background: rgba(255,255,255,0.15);
-      padding: 32px 24px;
+      padding: 20px 16px;
       border-radius: 18px;
-      max-width: 360px;
+      max-width: 420px;
+      margin: 0 auto;
       box-shadow: 0 10px 30px rgba(0,0,0,.25);
       animation: pop .8s ease;
     }
-    h1 { margin: 0 0 12px; }
+    h1 { margin: 8px 0 12px; }
     p { line-height: 1.6; }
+    .photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 12px 0 16px;
+    }
+    .photos img {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 6px 20px rgba(0,0,0,.25);
+    }
     button {
-      margin-top: 18px;
+      margin: 14px 6px 0;
       border: none;
-      padding: 12px 22px;
+      padding: 12px 18px;
       border-radius: 999px;
       background: white;
       color: #ff6b81;
@@ -38,24 +49,45 @@
     }
     .hidden { display: none; }
     @keyframes pop {
-      from { transform: scale(.9); opacity: 0; }
+      from { transform: scale(.95); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
 <body>
   <div class="card" id="step1">
-    <h1>Bibi ❤️</h1>
-    <p>Même à des kilomètres… je pense à toi.</p>
+    <h1>Pour toi, Bibi ❤️</h1>
+    <p>Même à des kilomètres de toi…</p>
     <button onclick="go()">Appuie ici 💌</button>
   </div>
 
   <div class="card hidden" id="step2">
     <h1>Joyeuse Saint-Valentin 🥰</h1>
+
+    <!-- Tes photos -->
+    <div class="photos">
+      <img src="photo1.jpg" alt="Nous 1">
+      <img src="photo2.jpg" alt="Nous 2">
+    </div>
+
     <p>
-      Peu importe la distance,<br/>
-      mon cœur choisit toujours toi.<br/><br/>
-      Je t’aime fort 💖
+      Même à des kilomètres de toi…<br><br>
+      Ce 14 février, je ne peux pas te prendre dans mes bras…<br>
+      Mais je peux penser à toi plus fort que jamais.<br><br>
+
+      Alors j’ai une petite proposition pour toi 💘<br><br>
+
+      ✨ <strong>Rendez-vous virtuel avec moi ?</strong><br><br>
+
+      📅 Date : 14 février<br>
+      🕰 Heure : 18h / 19h / 20h<br>
+      📱 Lieu : FaceTime / WhatsApp / Insta / Snap<br>
+      🍷 Dress code : Comme pour un vrai date<br>
+      🍽 Mission : On commande la même chose / on cuisine la même recette<br>
+      🎶 Bonus : Playlist spéciale “Clandestina”<br><br>
+
+      Et surtout…<br>
+      💭 On parle de nos prochains souvenirs ensemble.
     </p>
   </div>
 
